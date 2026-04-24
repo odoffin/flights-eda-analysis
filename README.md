@@ -43,22 +43,19 @@ from them?
 
 ## Data Cleaning Decisions
 
-- Cancelled flights removed from delay analysis
+- Cancelled flights: filled missing DepDel15 values with 0
+  Note: a better approach would be to exclude cancelled flights
+  entirely from departure delay analysis, as filling with 0
+  mislabels cancellations as on-time flights. This is a known
+  Limitation of the current analysis and will be corrected
+  in the next version.
+
 - Outliers removed using the IQR method on DepDelay and ArrDelay
 
 ---
 
 ## Author
 Odoffin
-ls
 ---
 
-## Data Cleaning Decisions
 
-- Cancelled flights removed from delay analysis
-- Outliers removed using the IQR method on DepDelay and ArrDelay
-
----
-
-## Author
-Odoffin
